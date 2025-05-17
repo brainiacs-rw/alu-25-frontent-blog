@@ -1,23 +1,21 @@
-import BlogCard from "./components/blog-card";
-import Navbar from "./components/common/navbar";
-import { blogData } from "./dummy-data";
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import TermsAndConditions from './pages/TermsAndCondition'
+import BaseLayout from './layout/base-layout'
+import BlogDetails from './pages/BlogDetails'
 export default function App() {
 
   return (
-    <div className="App">
-      <Navbar />
-      <div className="px-5 py-10 flex justify-between">
-        <span className="text-3xl font-bold">Read our blogs</span>
-        <button className="px-4 py-2 rounded-full bg-blue-600 text-white">Add blog</button>
-      </div>
+    <BrowserRouter>
+      <BaseLayout>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/terms' element={<TermsAndConditions />} />
+          <Route path='/blog/:blogId' element={<BlogDetails />} />
+        </Routes>
+      </BaseLayout>
 
-      {
-        blogData.map(blog => (
-          <BlogCard  {...blog} />
-        ))
-      }
-    </div>
+    </BrowserRouter>
   )
 }
 
