@@ -6,7 +6,7 @@ const Navbar  : FC = () => {
         <nav className="py-3 px-5 border-b border-slate-300 flex items-center justify-between">
             <span>Bloggie</span>
 
-            <div className="flex items-center gap-3"> 
+            <div className="flex items-center space-x-2"> 
                 <Link to={'/'}>Home</Link>
                 <Link to={'/terms'}>Terms and conditions</Link>
             </div>

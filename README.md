@@ -6,8 +6,8 @@
 - [x] Create reusable components
 - [x] Predefine props usings interfaces
 - [x] Reuse components with props and the map function
-- [] Handling multiple pages and routing
-- [] Dynamic routes
-- [] State management
+- [x] Handling multiple pages and routing
+- [x] Dynamic routes
 - [] Data fetching / integration
+- [] State management
 - [] ....
